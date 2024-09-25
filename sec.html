@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .mycls {
+        background-color: red;
+        color: yellow;
+        border-radius: 10px;
+        border-style: dotted;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="mybtn">Click</button>
+    <br />
+    <select id="mysel" title="Subjects">
+      <option>Physics</option>
+      <option>Geology</option>
+      <option>Mathematics</option>
+      <option>Archaeology</option>
+    </select>
+    <a href="http://www.google.com" id="atag" target="_blank" rel="noopener"
+      >Google</a
+    ><br />
+    <input
+      type="text"
+      id="txt"
+      value=""
+      placeholder="Enter name"
+      maxlength="20"
+      minlength="4"
+    />
+    <script>
+      var btn = document.getElementById("mybtn");
+      btn.setAttribute("class", "mycls");
+      btn.setAttribute("value", "Scientist");
+      btn.addEventListener("click", function () {
+        alert(this.value);
+      });
+      var sel = document.getElementById("mysel");
+      sel.setAttribute("class", "mycls");
+      sel.addEventListener("change", function () {
+        alert(this.value);
+      });
+      var lin = document.getElementById("atag");
+      lin.setAttribute("target", "_self");
+      //   lin.setAttribute("class", "mycls");
+      lin.setAttribute("href", "http://news.google.com");
+      var t = document.getElementById("txt");
+      t.setAttribute("class", "mycls");
+      t.addEventListener("change", function () {
+        btn.setAttribute("value", this.value);
+      });
+    </script>
+  </body>
+</html>

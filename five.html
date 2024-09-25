@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>First para</p>
+    <div>First div</div>
+    <p>Second para</p>
+    <div>Second div</div>
+    <p>Third para</p>
+    <div>Third div</div>
+    <br />
+    <hr />
+    <br />
+    <ul>
+      <li>Physics</li>
+      <li>Nuclear Physics</li>
+      <li>Geo Physics</li>
+      <li>Nano Physics</li>
+      <li>Low Temperature Physics</li>
+    </ul>
+    <br />
+    <script>
+      document.write("<center><table border=1>");
+      for (let i = 0; i < 5; i++) {
+        // if (i % 2 == 0)
+        document.write("<tr><td>Sqr(" + i + ")=" + Math.sqrt(i) + "</td></tr>");
+      }
+      document.write("</table></center>");
+    </script>
+    <script>
+      var matches = document.getElementsByTagName("p");
+      for (let i = 0; i < matches.length; i++) {
+        matches[i].style.backgroundColor = "yellow";
+      }
+      //   var mymatch = document.querySelectorAll("ul li");
+      //   document.write("<select>");
+      //   for (let i = 0; i < mymatch.length; i++) {
+      //     document.write("<option>" + mymatch[i].innerHTML + "</option>");
+      //   }
+      //   document.write("</select>");
+      var amatch = document.querySelectorAll("table tr td");
+      document.write("<select>");
+      for (let i = 0; i < amatch.length; i++) {
+        let aaaa = amatch[i].innerHTML.split("=");
+        let bbb = aaaa[1];
+        document.write("<option>" + bbb + "</option>");
+      }
+      document.write("</select>");
+    </script>
+  </body>
+</html>

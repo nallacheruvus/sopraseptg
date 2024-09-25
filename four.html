@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .cls {
+        background-color: chartreuse;
+        color: blue;
+      }
+    </style>
+    <script></script>
+  </head>
+  <body>
+    <!-- <p class="cls">First para</p>
+    <div>First div</div>
+    <p class="my cls">Second para</p>
+    <div class="cls">second div</div> -->
+    <script>
+      document.write("<center><table>");
+      for (let i = 0; i < 5; i++) {
+        if (i % 2 == 0) {
+          document.write(
+            '<tr class="cls"><td>Sqr(' + i + ")=" + Math.sqrt(i) + "</td></tr>"
+          );
+        } else {
+          document.write(
+            "<tr><td>Sqr(" + i + ")=" + Math.sqrt(i) + "</td></tr>"
+          );
+        }
+      }
+      document.write("</table></center>");
+    </script>
+    <button id="btn">Click</button>
+    <button id="btna">Click me</button>
+    <script>
+      var matches = document.getElementsByClassName("cls");
+      document.write("no of matches:" + matches.length);
+      matches[1].style.fontStyle = "italic";
+      matches[matches.length - 2].style.fontStyle = "bold";
+      for (let j = 0; j < matches.length; j++) {
+        matches[j].style.backgroundColor = "red";
+        document.write(matches[j].getElementsByTagName("td").item(0).innerHTML);
+      }
+      const aaa = document.getElementById("btn");
+      //   aaa.setAttribute("visiblity", "false");
+      aaa.style.display = "none";
+      const bbb = document.getElementById("btna");
+      bbb.addEventListener("click", function () {
+        // alert("check");
+        // aaa.setAttribute("visiblity", "visible");
+        aaa.style.display = "inline";
+      });
+    </script>
+  </body>
+</html>

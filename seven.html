@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--beforebegin-->
+    <div style="border-width: 2px; border-style: solid" id="main">
+      <!--after begin-->
+      <h1 id="title">Title of my block</h1>
+      <p id="hist">Test</p>
+      <p id="mypara" style="font-weight: bold">This is test para</p>
+      <!--before end-->
+    </div>
+    <!--after end-->
+    <script>
+      var md = document.getElementById("main");
+      md.insertAdjacentHTML(
+        "beforebegin",
+        "<p>Before begin area populated</p>"
+      );
+      md.insertAdjacentHTML("beforeend", "<p>before end area populated</p>");
+      md.insertAdjacentHTML("afterbegin", "<p>after begin area populated</p>");
+      md.insertAdjacentHTML("afterend", "<p>after end area populated</p>");
+      var cc = document.getElementById("mypara");
+      md.removeChild(cc);
+    </script>
+  </body>
+</html>

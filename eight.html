@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="border-width: 2px; border-style: solid" id="main">
+      <h1 id="title">Title of my block</h1>
+      <p id="hist">Test</p>
+    </div>
+    <script>
+      var pa = document.getElementById("main");
+      var old = document.getElementById("hist");
+      var np = document.createElement("p");
+      var nc = document.createTextNode("This para is updated para");
+      np.appendChild(nc);
+      pa.replaceChild(np, old);
+      var par = document.body;
+      var arr = ["Newton", "Einstein", "Raman", "Ramanujam", "Bose"];
+      var selList = document.createElement("select");
+      selList.id = "mysel";
+      par.appendChild(selList);
+      arr.forEach((currentItem) => {
+        var opt = document.createElement("option");
+        opt.value = currentItem;
+        opt.text = currentItem;
+        selList.appendChild(opt);
+      });
+      selList.addEventListener("change", function () {
+        alert(this.value);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a rel="noopener" href="http://www.google.com" target="_blank" id="mylink">
+      Google
+    </a>
+    <br />
+    <div id="adiv"></div>
+    <br />
+    <button id="mybtn" style="background-color: blue; color: yellow">
+      Click
+    </button>
+    <script>
+      var link = document.getElementById("mylink");
+      var href = link.getAttribute("href");
+      var target = link.getAttribute("target");
+      var str = " " + href + " " + target;
+      var btn = document.getElementById("mybtn");
+      var style = btn.getAttribute("style");
+      document.getElementById("adiv").innerHTML =
+        "<h2>Tag attributes of the a tag:</h2><mark>" +
+        str +
+        " " +
+        style +
+        "</mark>";
+    </script>
+  </body>
+</html>
